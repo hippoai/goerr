@@ -5,7 +5,7 @@ import "testing"
 // TestNew tests instanciates
 func TestNew(t *testing.T) {
 
-	err := NewErr("ERROR_CODE", map[string]interface{}{
+	err := New("ERROR_CODE", map[string]interface{}{
 		"key": "abc",
 		"prop": map[string]interface{}{
 			"value1": true,

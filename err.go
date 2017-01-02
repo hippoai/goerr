@@ -12,7 +12,7 @@ func (e *Err) Error() string {
 }
 
 // NewErr instanciates
-func NewErr(code string, props map[string]interface{}) *Err {
+func New(code string, props map[string]interface{}) *Err {
 	return &Err{
 		code:  code,
 		Props: props,
