@@ -11,10 +11,15 @@ func (e *Err) Error() string {
 	return e.Code
 }
 
-// NewErr instanciates
+// New instanciates
 func New(code string, props map[string]interface{}) *Err {
 	return &Err{
 		Code:  code,
 		Props: props,
 	}
+}
+
+// NewS instanciates an error without props
+func NewS(code string) *Err {
+	return New(code, map[string]interface{}{})
 }

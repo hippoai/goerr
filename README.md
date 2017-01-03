@@ -23,5 +23,15 @@ The `code` tells you what the error is, and the `Props` are where additional inf
 You can create a new error by using `New`
 
 ```go
-func New(code string, props map[string]interface{}) *Err
+code := "MY_ERROR_CODE"
+props := map[string]interface{}{
+  "info about": "my error",
+}
+err := New(code, props)
+```
+
+and if you have no interesting property to return
+
+```go
+err := NewS(code)
 ```
