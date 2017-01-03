@@ -33,4 +33,11 @@ func TestNew(t *testing.T) {
 		t.Fatal("Wrong key")
 	}
 
+	err2 := NewS("ERR")
+	err2_ := New("ERR", map[string]interface{}{})
+
+	if err2.Code != err2_.Code {
+		t.Fatal("Whaaat")
+	}
+
 }
