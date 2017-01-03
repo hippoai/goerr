@@ -5,7 +5,7 @@ Standard error structure.
 Errors are stored in the following structure
 ```go
 type Err struct {
-	code  string
+	Code  string
 	Props map[string]interface{}
 }
 ```
