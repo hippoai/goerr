@@ -2,8 +2,8 @@ package goerr
 
 // Error implements our custom errors
 type Err struct {
-	Code  string
-	Props map[string]interface{}
+	Code  string                 `json:"code"`
+	Props map[string]interface{} `json:"props"`
 }
 
 // Error to implement the error interface
