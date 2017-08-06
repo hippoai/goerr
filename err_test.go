@@ -1,6 +1,9 @@
 package goerr
 
-import "testing"
+import (
+	"strings"
+	"testing"
+)
 
 // TestNew tests instanciates
 func TestNew(t *testing.T) {
@@ -20,7 +23,7 @@ func TestNew(t *testing.T) {
 	var e error
 	e = err
 
-	if e.Error() != "ERROR_CODE" {
+	if !strings.HasPrefix(e.Error(), "[ERROR_CODE]") {
 		t.Fatal("Wrong error code")
 	}
 
